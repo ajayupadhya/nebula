@@ -1,0 +1,38 @@
+.mynav {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  z-index: 1;
+}
+.mybar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+
+  width: 300px;
+}
+
+.middlecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  top:120px
+}
+.loginfield {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 350px;
+}
+.loginbtn {
+  width: 40%;
+}

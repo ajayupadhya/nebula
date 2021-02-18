@@ -1,0 +1,50 @@
+.createmiddle {
+
+  height: 80vh;
+  margin-top: 50px;
+  align-items: center;
+  background: white;
+}
+.listdrop {
+  display: flex;
+
+  width: 300px;
+}
+
+.middlename {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100px;
+  margin-left: 100px;
+  margin-top: 20px;
+
+}
+
+.middleinp {
+  margin-left: 10px;
+  padding-left: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  width: 250px;
+  height: 30px;
+}
+
+.middledate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+height: 200px;
+}
+.rating {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+.rating > p {
+  width: 60px;
+}
+ .listbtn{
+     margin-left: 300px;
+ }

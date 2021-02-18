@@ -1,0 +1,20 @@
+.home{
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.homenav{
+  
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: .5px solid black;
+}
+.homemiddle{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height:500px
+}
