@@ -5,8 +5,8 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
 const Card = ({ name, date, org, rating, phone }) => {
-  const [value, setValue] = React.useState(2);
-  console.log(rating);
+  
+  
 
   return (
     <div className="card">

@@ -31,7 +31,7 @@ const Listdata = () => {
     setfiltered([])
     setfiltered(fil);
   };
-console.log(filtered)
+
   return (
     <div className="data">
       <div className="listnav">

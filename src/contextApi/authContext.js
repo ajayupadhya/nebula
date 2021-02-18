@@ -31,7 +31,7 @@ const removeError = (dispatch) => {
 const localSignIn = (dispatch) => {
   return () => {
     const tok = localStorage.getItem("Token");
-    console.log(tok);
+    
     if (tok) {
       dispatch({ type: "signin", payload: tok, isSignedIn: true });
     }

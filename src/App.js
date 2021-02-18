@@ -24,7 +24,7 @@ function App() {
       setloading(true);
     }, 1000);
   }, []);
-  console.log(isSignedIn, user);
+ 
   if (!loading) {
     return <div></div>;
   }
