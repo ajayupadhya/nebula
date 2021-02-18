@@ -10,7 +10,7 @@ const Listdata = () => {
   useEffect(() => {
     const tok = localStorage.getItem("Token");
     const id = JSON.parse(localStorage.getItem("UserData"));
-    fetch(`http://localhost:8000/api/data/${id._id}`, {
+    fetch(`https://warm-journey-07484.herokuapp.com/api/data/${id._id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

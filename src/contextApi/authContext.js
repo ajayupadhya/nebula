@@ -50,7 +50,7 @@ const signin = (dispatch) => {
         },
         body: JSON.stringify({ email: email, password: parseInt(password) }),
       };
-      fetch("http://localhost:8000/api/signin/", requestOptions)
+      fetch("https://warm-journey-07484.herokuapp.com/api/signin/", requestOptions)
         .then((response) => response.json())
         .then((data) => {
           localStorage.setItem("Token", data.token);
@@ -97,7 +97,7 @@ const signup = (dispatch) => {
           password: password,
         }),
       };
-      fetch("http://localhost:8000/api/signup/", requestOptions)
+      fetch("https://warm-journey-07484.herokuapp.com/api/signup/", requestOptions)
         .then((response) => response.json())
         .then((data) => {
           dispatch({ type: "signup" });
@@ -151,7 +151,7 @@ const createData = (dispatch) => {
         }),
       };
 
-      await fetch(`http://localhost:8000/api/data/newdata/${id._id}`, requestOptions)
+      await fetch(`https://warm-journey-07484.herokuapp.com/api/data/newdata/${id._id}`, requestOptions)
         .then((response) => response.json())
         .then((data) => console.log("data", data));
     } catch (err) {
