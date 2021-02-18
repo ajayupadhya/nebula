@@ -20,7 +20,10 @@ const Listdata = () => {
       },
     })
       .then((response) => response.json())
-      .then((data) => setdata(data.datas));
+      .then((data) => {
+        setdata(data.datas)
+        setfiltered(data.datas)
+      });
   }, []);
 
  
