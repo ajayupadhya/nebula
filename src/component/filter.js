@@ -6,9 +6,9 @@ const Filter = ({ datas, getFilter }) => {
   const [endDate, setendDate] = useState(new Date());
   const [oraganistion, setoraganistion] = useState("");
   const [rating, setrating] = useState(0);
-  const [da, setda] = useState([]);
-  const [open, setopen] = useState(false)
-  
+  const [startpart, setstartpart] = useState(0);
+  const [endpart, setendpart] = useState(5);
+
   const changeorg = (e) => {
     const org = datas?.filter((item) => item.organisation === e);
 
@@ -16,7 +16,7 @@ const Filter = ({ datas, getFilter }) => {
   };
 
   const onChangerating = (newRating) => {
-    getFilter([])
+    getFilter([]);
     setrating(newRating);
     const rate = datas?.filter((item) => item.rating === newRating);
 
@@ -43,16 +43,16 @@ const Filter = ({ datas, getFilter }) => {
     );
     getFilter(ti);
   };
-
-  
-
+  const rateFilter = () =>{
+    const ti = datas?.filter((item) => item.rating >= startpart && item.rating <= endpart)
+    getFilter(ti);
+  }
 
   return (
     <div className="filter">
       <h2>Filter</h2>
 
-      
-      <div className="datefilter" >
+      <div className="datefilter">
         <div>
           <span>From </span>{" "}
           <DatePicker onChange={(e) => datechange(e)} value={startdate} />
@@ -93,6 +93,25 @@ const Filter = ({ datas, getFilter }) => {
           activeColor="#ffd700"
           onChange={onChangerating}
         />
+        Select Rating :
+        <div className="selectRate">
+          <input
+            type="number"
+            onChange={(e) => setstartpart(e.target.value)}
+            value={startpart}
+          />
+          <input
+            type="number"
+            onChange={(e) => setendpart(e.target.value)}
+            value={endpart}
+          />
+          <button
+            className="btn btn-primary loginbtn"
+            onClick={() => rateFilter()}
+          >
+            Search
+          </button>
+        </div>
       </div>
     </div>
   );

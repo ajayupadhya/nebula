@@ -9,9 +9,8 @@
   display: grid;
   grid-template-columns: repeat(3, 2fr);
   grid-gap: 10px;
-justify-items: center;
-align-items: center;
-  
+  justify-items: center;
+  align-items: center;
 }
 .eachitem {
   border: 2px solid black;
@@ -24,7 +23,6 @@ align-items: center;
   flex-direction: row;
 }
 .card {
-  
   display: flex;
   position: relative;
   flex-direction: column;
@@ -42,6 +40,7 @@ align-items: center;
 }
 .left {
   width: 30%;
+  border-right: 1px solid black;
 }
 .filter {
   height: 80vh;
@@ -57,11 +56,22 @@ align-items: center;
   align-items: center;
   justify-content: space-evenly;
 }
-.rate{
-  
+.rate {
   margin-top: 40px;
 }
 
+.selectRate {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 250px;
+}
+
+.selectRate > input {
+  margin-top: 10px;
+  width: 50px;
+}
 
 @media only screen and (max-width: 1190px) {
   .right {

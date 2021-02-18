@@ -46,6 +46,7 @@ const Listdata = () => {
             filtered.map((item) => {
               return (
                 <Card
+                key = {item.phone}
                   name={item.name}
                   phone={item.phoneNumber}
                   org={item.organisation}
